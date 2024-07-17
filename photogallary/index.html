@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photo Gallery App</title>
+    <link rel="stylesheet" href="photos.css">
+</head>
+<body>
+    <!--Header section-->
+    <header>
+        <div class="container">
+            <h1>Photo Gallery</h1>
+            <nav>
+                <ul>
+                    <li><a href="#gallery">Gallery</a></li>
+                    <li><a href="#upload">Upload</a></li>
+                    <li><a href="#albums">Albums</a></li>
+                    
+                </ul>
+            </nav>
+
+        </div>
+    </header>
+
+    <!-- main content section -->
+     <main>
+        <!-- Gallery section -->
+         <section id="gallery" class="photo-section">
+            <div class="container">
+                <h2>Gallery</h2>
+                <!--container for displaying photos-->
+                <div id="photo-grid" class="photo-grid"></div>
+            </div>
+         </section>
+
+         <!--upload section-->
+         <section id="upload" class="photo-section">
+            <div class="container">
+                <h2>Upload Photo</h2>
+                <form id="upload-form" class="upload-form">
+                    <label for="upload-input">Select photo:</label>
+                    <input type="file" id="upload-input" accept="image/*" required>
+                    <label for="album_name">Album Name:</label>
+                    <input type="text" id="album-name" placeholder="Enter album name...">
+                    <button type="submit">Upload</button>
+                </form>
+         </section>
+
+
+         <!--album section-->
+         <section id="albums" class="photo-section">
+            <div class="container">
+                <h2>Albums</h2>
+                <div id="album-grid" class="album-grid"></div>
+            </div>
+         </section>
+
+
+         <!--Footer section-->
+         <footer>
+            <div class="container">
+                <p>&copy; 2024 Photo Gallery App. All rights reserved</p>
+            </div>
+        </footer>
+
+
+         
+
+
+     </main>
+    <script src="photos.js"></script>
+</body>
+</html>
