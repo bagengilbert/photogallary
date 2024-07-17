@@ -1,61 +1,159 @@
-/* Reset & general styling*/
-
+/* Reset and General Styles */
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    box-sizing: border-box; /* Ensure consistent box sizing */
 }
 
 body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    background-color: #f0f0f0;
-    color: #333;
+    font-family: 'Arial', sans-serif; /* Default font family */
+    line-height: 1.6; /* Line height for better readability */
+    background-color: #f0f0f0; /* Light grey background color */
+    color: #333; /* Dark grey text color */
 }
 
-/* header section */
-
+/* Header Styles */
 header {
-    background-color: #333;
-    color: #fff;
-    padding: 1rem;
-
+    background-color: #333; /* Dark background for header */
+    color: #fff; /* White text color */
+    padding: 1rem; /* Padding inside the header */
 }
 
 header .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    display: flex; 
+    justify-content: space-between; /* Space items evenly */
+    align-items: center; /* Center items vertically */
+    flex-wrap: wrap; /* Wrap items to next line on small screens */
 }
 
-header h1{
-    font-size: 2rem;
+header h1 {
+    font-size: 2rem; /* Larger font size for the title */
 }
-nav ul{
-    list-style-type: none;
-    display: flex;
 
+nav ul {
+    list-style-type: none; /* Remove default list styling */
+    display: flex; /* Use flexbox for navigation items */
+    flex-wrap: wrap; /* Wrap items on small screens */
 }
+
 nav ul li {
-    margin-right: 2rem;
+    margin-right: 1rem; /* Space between navigation items */
 }
 
-nav ul li a{
-    text-decoration: none;
-    color: #fff;
-    padding: 0.5rem 1 rem;
-    transition: background-color 0.3 ease;
+nav ul li a {
+    text-decoration: none; /* Remove underline from links */
+    color: #fff; /* White text color */
+    padding: 0.5rem 1rem; /* Padding inside links */
+    transition: background-color 0.3s ease; /* Smooth background transition */
 }
 
 nav ul li a:hover {
-    background-color: #555;
+    background-color: #555; /* Darker background on hover */
 }
 
-
-/* main section */
+/* Main Content Section */
 main {
-    padding: 2rem;
+    padding: 2rem; /* Padding around main content */
 }
-.photo-section{
-    margin-bottom: ;
+
+.photo-section {
+    margin-bottom: 2rem; /* Space between sections */
+}
+
+.container {
+    max-width: 1200px; /* Maximum width for container */
+    margin: 0 auto; /* Center container */
+    padding: 0 1rem; /* Padding inside container */
+}
+
+h2 {
+    font-size: 1.8rem; /* Larger font size for section headings */
+    margin-bottom: 1rem; /* Space below headings */
+}
+
+/* Form Styles */
+.upload-form {
+    display: flex; /* Use flexbox for form layout */
+    flex-direction: column; /* Stack items vertically */
+    max-width: 400px; /* Maximum width for form */
+}
+
+.upload-form label {
+    margin-bottom: 0.5rem; /* Space below labels */
+}
+
+.upload-form input[type="file"],
+.upload-form input[type="text"] {
+    margin-bottom: 1rem; /* Space below inputs */
+    padding: 0.5rem; /* Padding inside inputs */
+    font-size: 1rem; /* Font size for inputs */
+}
+
+.upload-form button {
+    padding: 0.75rem 1rem; /* Padding inside button */
+    background-color: #007bff; /* Primary button color */
+    color: #fff; /* White text color */
+    border: none; /* Remove border */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s ease; /* Smooth background transition */
+}
+
+.upload-form button:hover {
+    background-color: #0056b3; /* Darker background on hover */
+}
+
+/* Footer Styles */
+footer {
+    background-color: #333; /* Dark background for footer */
+    color: #fff; /* White text color */
+    padding: 1rem; /* Padding inside footer */
+    text-align: center; 
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header .container {
+        flex-direction: column; 
+        text-align: center; 
+    }
+
+    nav ul {
+        flex-direction: column; /* Stack navigation items vertically */
+        text-align: center; 
+    }
+
+    nav ul li {
+        margin-right: 0; /* Remove right margin */
+        margin-bottom: 0.5rem; /* Space below navigation items */
+    }
+
+    main {
+        padding: 1rem; /* Reduce padding around main content */
+    }
+
+    .container {
+        padding: 0 0.5rem; /* Reduce padding inside container */
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.5rem; /* Smaller font size for title */
+    }
+
+    nav ul li a {
+        padding: 0.5rem; /* Reduce padding inside links */
+    }
+
+    h2 {
+        font-size: 1.5rem; /* Smaller font size for section headings */
+    }
+
+    .upload-form {
+        max-width: 100%; /* Full width form */
+    }
+
+    .upload-form button {
+        padding: 0.5rem; /* Reduce padding inside button */
+    }
 }
