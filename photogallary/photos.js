@@ -13,7 +13,17 @@ document.addEventListener("DOMContentLoaded",()=>{
 
     // function to display photos in the grid
     const displayPhotos = (photo) =>{
-        //create a div element to hold photos and display 
+        const photoDiv = document.createElement("div");
+        photoDiv.classList.add("photo");
+
+    const img = document.createElement("img");
+        img.src = photo.url;
+        img.alt = "photo";
+
+        //create div element for the caption (album name)
+        const caption = document.createElement("div");
+        caption.classList.add("caption");
+        caption.textContent = photo.album;
         
     }
 })
