@@ -24,6 +24,28 @@ document.addEventListener("DOMContentLoaded",()=>{
         const caption = document.createElement("div");
         caption.classList.add("caption");
         caption.textContent = photo.album;
-        
+
+        //append the caption and image to the photo div
+        photoDiv.appendChild(img);
+        photoDiv.appendChild(caption);
+
+        //append the photo div to the photo grid
+        photoGrid.appendChild(photoDiv);
+    };
+
+    // function to display and create albums in the grid
+    const displayAlbum = (albumName) => {
+        const albumDiv = document.createElement("div");
+        albumDiv.classList.add("album");
+        //h3 element  for the album title
+
+        const albumTitle = document.createElement("h3");
+        albumTitle.textContent = albumName;
+
+        //div element for holding photos in the album
+        const albumPhotos = document.createElement("div");
+        albumPhotos.classList.add("album-photos");
+
+       
     }
 })
